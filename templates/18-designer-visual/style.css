@@ -1,0 +1,259 @@
+/* ==========================================================
+   THEME — edit these variables to reskin the whole resume.
+   ========================================================== */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-primary: #ea580c;   /* bold accent */
+  --color-primary-contrast: #ffffff;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-surface: #f4f4f5;
+
+  --font-heading: -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-body: -apple-system, "Helvetica Neue", Arial, sans-serif;
+
+  --spacing-unit: 8px;
+  --line-height-base: 1.6;
+  --page-max-width: 800px;
+  --photo-size: 88px;
+}
+
+/* ==========================================================
+   BASE
+   ========================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: calc(var(--spacing-unit) * 6) calc(var(--spacing-unit) * 3);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: var(--line-height-base);
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+}
+
+p {
+  margin: calc(var(--spacing-unit) * 1) 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+.photo {
+  width: var(--photo-size);
+  height: var(--photo-size);
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-primary-contrast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+#resume-header h1 {
+  font-size: 2rem;
+}
+
+#resume-header .title {
+  margin-top: calc(var(--spacing-unit) * 0.5);
+  color: var(--color-muted);
+  font-size: 1.1rem;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+  padding: 0;
+  margin-top: calc(var(--spacing-unit) * 2);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================
+   SECTIONS
+   ========================================================== */
+main section {
+  margin-bottom: calc(var(--spacing-unit) * 5);
+  margin-top: calc(var(--spacing-unit) * 5);
+}
+
+section h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+}
+
+/* ==========================================================
+   WORK GRID
+   ========================================================== */
+.work-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(var(--spacing-unit) * 3);
+  padding: 0;
+  margin: 0;
+}
+
+.work-thumb {
+  aspect-ratio: 4 / 3;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 800;
+  border-radius: 10px;
+  margin-bottom: calc(var(--spacing-unit) * 1);
+}
+
+/* If you swap in a real <img>, it should fill the same box shape */
+img.work-thumb {
+  width: 100%;
+  object-fit: cover;
+}
+
+.work-title {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   EXPERIENCE / EDUCATION ENTRIES
+   ========================================================== */
+.entry + .entry {
+  margin-top: calc(var(--spacing-unit) * 3);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 2);
+}
+
+.entry-header h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.entry-org {
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.entry-date {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.entry ul {
+  list-style: disc;
+  margin-top: calc(var(--spacing-unit) * 1);
+  padding-left: calc(var(--spacing-unit) * 2.5);
+}
+
+.entry li {
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+/* ==========================================================
+   SKILLS
+   ========================================================== */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 1);
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  background: var(--color-surface);
+  border-radius: 6px;
+  padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1.25);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width: 600px) {
+  body {
+    padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 2.5);
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-header {
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 0.25);
+  }
+}
+
+/* ==========================================================
+   PRINT — this template is meant primarily for the web; the
+   portfolio image grid is simplified (outlined boxes, no fill)
+   since large images print poorly and waste ink.
+   ========================================================== */
+@media print {
+  body {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .photo {
+    background: none;
+    color: var(--color-text);
+    border: 2px solid var(--color-border);
+  }
+
+  .work-thumb {
+    background: none;
+    border: 1px solid var(--color-border);
+  }
+
+  main section,
+  .entry {
+    break-inside: avoid;
+  }
+}

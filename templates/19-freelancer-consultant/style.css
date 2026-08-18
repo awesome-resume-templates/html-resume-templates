@@ -1,0 +1,257 @@
+/* ==========================================================
+   THEME — edit these variables to reskin the whole resume.
+   ========================================================== */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-primary: #0369a1;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-surface: #f0f9ff;
+
+  --font-heading: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-body: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  --spacing-unit: 8px;
+  --line-height-base: 1.6;
+  --page-max-width: 800px;
+}
+
+/* ==========================================================
+   BASE
+   ========================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: calc(var(--spacing-unit) * 6) calc(var(--spacing-unit) * 3);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: var(--line-height-base);
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+p {
+  margin: calc(var(--spacing-unit) * 1) 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+#resume-header h1 {
+  font-size: 2rem;
+}
+
+#resume-header .title {
+  margin-top: calc(var(--spacing-unit) * 0.5);
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+  padding: 0;
+  margin-top: calc(var(--spacing-unit) * 2);
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+/* ==========================================================
+   SECTIONS
+   ========================================================== */
+main section {
+  margin-bottom: calc(var(--spacing-unit) * 5);
+}
+
+section h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  padding-bottom: calc(var(--spacing-unit) * 1);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ==========================================================
+   SERVICES
+   ========================================================== */
+.services-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--spacing-unit) * 2);
+  padding: 0;
+  margin: 0;
+}
+
+.services-list li {
+  background: var(--color-surface);
+  border-radius: 8px;
+  padding: calc(var(--spacing-unit) * 2);
+}
+
+.services-list h3 {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+}
+
+.services-list p {
+  margin-top: calc(var(--spacing-unit) * 0.75);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* ==========================================================
+   EXPERIENCE ENTRIES
+   ========================================================== */
+.entry + .entry {
+  margin-top: calc(var(--spacing-unit) * 3);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 2);
+}
+
+.entry-header h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.entry-org {
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.entry-date {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.entry ul {
+  list-style: disc;
+  margin-top: calc(var(--spacing-unit) * 1);
+  padding-left: calc(var(--spacing-unit) * 2.5);
+}
+
+.entry li {
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+/* ==========================================================
+   TESTIMONIALS
+   ========================================================== */
+blockquote {
+  margin: 0 0 calc(var(--spacing-unit) * 2.5);
+  padding-left: calc(var(--spacing-unit) * 2.5);
+  border-left: 3px solid var(--color-primary);
+}
+
+blockquote:last-child {
+  margin-bottom: 0;
+}
+
+blockquote p {
+  font-style: italic;
+  margin: 0;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: calc(var(--spacing-unit) * 1);
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* ==========================================================
+   SKILLS
+   ========================================================== */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 1);
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border-radius: 999px;
+  padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1.5);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width: 600px) {
+  body {
+    padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 2.5);
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-header {
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 0.25);
+  }
+}
+
+/* ==========================================================
+   PRINT
+   ========================================================== */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  main section,
+  .entry,
+  blockquote {
+    break-inside: avoid;
+  }
+}

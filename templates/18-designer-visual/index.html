@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane Doe — Resume</title>
+  <meta name="description" content="Graphic designer HTML resume template with a portfolio grid — free, open source, easy to customize.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HOW TO CUSTOMIZE THIS TEMPLATE
+       1. Replace "Jane Doe" and every placeholder below with your
+          own information.
+       2. Replace the ".photo" placeholder <div> with your own photo:
+          <img src="your-photo.jpg" alt="Your Name" class="photo">
+       3. Replace each ".work-thumb" placeholder the same way with
+          <img src="project-1.jpg" alt="Project name" class="work-thumb">
+       4. NOTE: this template is designed primarily to be viewed as a
+          live web page (hosted or opened locally) — the image-heavy
+          portfolio grid is simplified when printed, since large
+          images don't reproduce well on paper. If you mainly need a
+          PDF/printout, consider "Creative Portfolio" or "Minimalist"
+          instead.
+       5. Preview by opening this file in a browser.
+       ============================================================ -->
+
+  <header id="resume-header">
+    <!-- Placeholder avatar. Replace with a real <img> — see note above. -->
+    <div class="photo" aria-hidden="true"><span>JD</span></div>
+    <h1><!-- Your full name --> Jane Doe</h1>
+    <p class="title"><!-- Your job title / target role --> Graphic Designer</p>
+    <ul class="contact-list" aria-label="Contact information">
+      <li><a href="mailto:jane.doe@example.com">jane.doe@example.com</a></li>
+      <li><a href="https://example.com">example.com</a></li>
+      <li>San Francisco, CA</li>
+    </ul>
+  </header>
+
+  <main>
+
+    <section id="work" aria-labelledby="work-heading">
+      <h2 id="work-heading">Work</h2>
+      <!-- Copy this <li> once per portfolio piece. Replace each
+           ".work-thumb" placeholder with a real <img>. -->
+      <ul class="work-grid">
+        <li>
+          <div class="work-thumb" aria-hidden="true">01</div>
+          <p class="work-title">Nova — Brand Identity</p>
+        </li>
+        <li>
+          <div class="work-thumb" aria-hidden="true">02</div>
+          <p class="work-title">Alto — Packaging</p>
+        </li>
+        <li>
+          <div class="work-thumb" aria-hidden="true">03</div>
+          <p class="work-title">Field Guide — Editorial</p>
+        </li>
+        <li>
+          <div class="work-thumb" aria-hidden="true">04</div>
+          <p class="work-title">Loop — App Icon Set</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+
+      <!-- Copy this <article> block once per job. Delete if not needed. -->
+      <article class="entry">
+        <div class="entry-header">
+          <h3>Graphic Designer <span class="entry-org">— Acme Studio</span></h3>
+          <p class="entry-date">2021 — Present</p>
+        </div>
+        <ul>
+          <li>Designed packaging and identity work for 20+ consumer brands.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-header">
+          <h3>Junior Designer <span class="entry-org">— Globex Creative</span></h3>
+          <p class="entry-date">2019 — 2021</p>
+        </div>
+        <ul>
+          <li>Supported editorial design for a quarterly print magazine.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <!-- One skill per <li>. Add or remove freely. -->
+      <ul class="skills-list">
+        <li>Illustrator</li>
+        <li>Photoshop</li>
+        <li>InDesign</li>
+        <li>Packaging Design</li>
+        <li>Typography</li>
+      </ul>
+    </section>
+
+    <section id="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <!-- Copy this <article> block once per school. Delete if not needed. -->
+      <article class="entry">
+        <div class="entry-header">
+          <h3>B.F.A. in Graphic Design <span class="entry-org">— State University</span></h3>
+          <p class="entry-date">2015 — 2019</p>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- Optional: delete this line if you don't want it -->
+    <p class="footer-note">References available on request.</p>
+  </footer>
+
+</body>
+</html>
