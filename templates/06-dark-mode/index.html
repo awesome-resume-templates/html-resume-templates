@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane Doe — Resume</title>
+  <meta name="description" content="Dark mode HTML resume template — free, open source, easy to customize.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HOW TO CUSTOMIZE THIS TEMPLATE
+       1. Replace "Jane Doe" and every placeholder below with your
+          own information.
+       2. To change colors/fonts, edit the :root block at the top of
+          style.css. Want a light theme instead? Uncomment the
+          "LIGHT MODE OVERRIDE" block near the top of that file.
+       3. To add/remove a job/school/skill, copy or delete one
+          <li> (or <article>) block — each is self-contained.
+       4. Preview by opening this file in a browser. When it looks
+          right, use your browser's Print dialog → "Save as PDF" —
+          this template automatically prints on a white background
+          (dark backgrounds never print), so the PDF stays readable.
+       ============================================================ -->
+
+  <header id="resume-header">
+    <h1><!-- Your full name --> Jane Doe</h1>
+    <p class="title"><!-- Your job title / target role --> Product Manager</p>
+    <ul class="contact-list" aria-label="Contact information">
+      <li><a href="mailto:jane.doe@example.com">jane.doe@example.com</a></li>
+      <li><a href="tel:+15550123456">+1 (555) 012-3456</a></li>
+      <li>San Francisco, CA</li>
+    </ul>
+  </header>
+
+  <main>
+
+    <section id="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <!-- 2-3 sentence summary of who you are and what you're looking for -->
+      <p>
+        Product manager with 5+ years shipping B2B SaaS features end to end —
+        from customer discovery through launch and iteration.
+      </p>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+
+      <!-- Copy this <article> block once per job. Delete if not needed. -->
+      <article class="entry">
+        <div class="entry-header">
+          <h3>Senior Product Manager <span class="entry-org">— Acme Inc.</span></h3>
+          <p class="entry-date">2022 — Present</p>
+        </div>
+        <ul>
+          <li>Launched a self-serve onboarding flow that lifted activation by 22%.</li>
+          <li>Owned the roadmap for the billing platform, a team of 6 engineers.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-header">
+          <h3>Product Manager <span class="entry-org">— Globex Corp.</span></h3>
+          <p class="entry-date">2019 — 2022</p>
+        </div>
+        <ul>
+          <li>Shipped the first version of the analytics dashboard, now used by 80% of customers.</li>
+          <li>Ran quarterly customer interviews to guide the product roadmap.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <!-- Copy this <article> block once per school. Delete if not needed. -->
+      <article class="entry">
+        <div class="entry-header">
+          <h3>B.A. in Economics <span class="entry-org">— State University</span></h3>
+          <p class="entry-date">2015 — 2019</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <!-- One skill per <li>. Add or remove freely. -->
+      <ul class="skills-list">
+        <li>Product Strategy</li>
+        <li>Roadmapping</li>
+        <li>SQL</li>
+        <li>User Research</li>
+        <li>A/B Testing</li>
+        <li>Figma</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- Optional: delete this line if you don't want it -->
+    <p class="footer-note">References available on request.</p>
+  </footer>
+
+</body>
+</html>

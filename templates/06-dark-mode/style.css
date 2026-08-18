@@ -1,0 +1,255 @@
+/* ==========================================================
+   THEME — edit these variables to reskin the whole resume.
+   ========================================================== */
+:root {
+  --color-bg: #121212;
+  --color-text: #e5e7eb;
+  --color-primary: #5eead4;   /* accent — job titles, links */
+  --color-muted: #9ca3af;
+  --color-border: rgba(255, 255, 255, 0.12);
+
+  --font-heading: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-body: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  --spacing-unit: 8px;
+  --line-height-base: 1.6;
+  --page-max-width: 800px;
+}
+
+/* Want a light theme instead? Uncomment this block — it overrides
+   the dark values above with a plain light theme. */
+/*
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-primary: #0f766e;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+}
+*/
+
+/* ==========================================================
+   BASE
+   ========================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: calc(var(--spacing-unit) * 6) calc(var(--spacing-unit) * 3);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: var(--line-height-base);
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+p {
+  margin: calc(var(--spacing-unit) * 1) 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+ul {
+  margin: calc(var(--spacing-unit) * 1) 0;
+  padding-left: calc(var(--spacing-unit) * 2.5);
+}
+
+li {
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+#resume-header {
+  margin-bottom: calc(var(--spacing-unit) * 5);
+}
+
+#resume-header h1 {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+#resume-header .title {
+  margin-top: calc(var(--spacing-unit) * 0.5);
+  color: var(--color-muted);
+  font-size: 1.1rem;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+  padding: 0;
+  margin-top: calc(var(--spacing-unit) * 2);
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+.contact-list li {
+  margin: 0;
+}
+
+/* ==========================================================
+   SECTIONS
+   ========================================================== */
+main section {
+  margin-bottom: calc(var(--spacing-unit) * 5);
+  padding-top: calc(var(--spacing-unit) * 4);
+  border-top: 1px solid var(--color-border);
+}
+
+main section:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+section h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+/* ==========================================================
+   EXPERIENCE / EDUCATION ENTRIES
+   ========================================================== */
+.entry + .entry {
+  margin-top: calc(var(--spacing-unit) * 3);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 2);
+}
+
+.entry-header h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.entry-org {
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.entry-date {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.entry ul {
+  margin-top: calc(var(--spacing-unit) * 1);
+}
+
+/* ==========================================================
+   SKILLS
+   ========================================================== */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 1.5);
+  padding: 0;
+}
+
+.skills-list li {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1.25);
+  font-size: 0.9rem;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================
+   RESPONSIVE — single column fallback under ~600px
+   ========================================================== */
+@media (max-width: 600px) {
+  body {
+    padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 2.5);
+  }
+
+  #resume-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .entry-header {
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 0.25);
+  }
+}
+
+/* ==========================================================
+   PRINT — always force a light background + dark text.
+   A dark background must never be sent to a printer.
+   ========================================================== */
+@media print {
+  body {
+    padding: 0;
+    max-width: 100%;
+    background: #ffffff;
+    color: #1a1a1a;
+  }
+
+  #resume-header h1,
+  a {
+    color: #1a1a1a;
+  }
+
+  section h2,
+  .entry-org,
+  .entry-date,
+  #resume-header .title,
+  .contact-list,
+  footer {
+    color: #4b5563;
+  }
+
+  main section {
+    border-top-color: #d1d5db;
+  }
+
+  .skills-list li {
+    background: none;
+    border-color: #d1d5db;
+  }
+
+  main section,
+  .entry {
+    break-inside: avoid;
+  }
+}

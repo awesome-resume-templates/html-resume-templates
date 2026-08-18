@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane Doe — Resume</title>
+  <meta name="description" content="Timeline HTML resume template — free, open source, easy to customize.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HOW TO CUSTOMIZE THIS TEMPLATE
+       1. Replace "Jane Doe" and every placeholder below with your
+          own information.
+       2. To change colors/fonts, edit the :root block at the top
+          of style.css.
+       3. To add/remove a timeline entry, copy or delete one
+          <li class="timeline-item"> block — each is self-contained.
+       4. Preview by opening this file in a browser. When it looks
+          right, use your browser's Print dialog → "Save as PDF"
+          (the connecting line is decorative and is simplified when printed).
+       ============================================================ -->
+
+  <header id="resume-header">
+    <h1><!-- Your full name --> Jane Doe</h1>
+    <p class="title"><!-- Your job title / target role --> Marketing Director</p>
+    <ul class="contact-list" aria-label="Contact information">
+      <li><a href="mailto:jane.doe@example.com">jane.doe@example.com</a></li>
+      <li><a href="tel:+15550123456">+1 (555) 012-3456</a></li>
+      <li>San Francisco, CA</li>
+    </ul>
+  </header>
+
+  <main>
+
+    <section id="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <!-- 2-3 sentence summary of who you are and what you're looking for -->
+      <p>
+        Marketing leader with 10+ years growing demand-gen and brand programs
+        for B2B software companies, from seed stage through IPO.
+      </p>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+
+      <!-- Copy this <li class="timeline-item"> block once per job. Delete if not needed. -->
+      <ul class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <div class="entry-header">
+              <h3>Marketing Director <span class="entry-org">— Acme Inc.</span></h3>
+              <p class="entry-date">2021 — Present</p>
+            </div>
+            <ul>
+              <li>Grew qualified pipeline by 3x through a rebuilt content and SEO program.</li>
+              <li>Built and led a team of 8 across content, growth, and brand.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <div class="entry-header">
+              <h3>Senior Marketing Manager <span class="entry-org">— Globex Corp.</span></h3>
+              <p class="entry-date">2017 — 2021</p>
+            </div>
+            <ul>
+              <li>Launched the company's first paid acquisition program, hitting target CAC in month 3.</li>
+              <li>Owned the rebrand that shipped alongside the Series B announcement.</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+
+      <!-- Copy this <li class="timeline-item"> block once per school. Delete if not needed. -->
+      <ul class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-content">
+            <div class="entry-header">
+              <h3>B.A. in Communications <span class="entry-org">— State University</span></h3>
+              <p class="entry-date">2013 — 2017</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <!-- One skill per <li>. Add or remove freely. -->
+      <ul class="skills-list">
+        <li>Demand Generation</li>
+        <li>Content Strategy</li>
+        <li>SEO</li>
+        <li>Brand Marketing</li>
+        <li>Team Leadership</li>
+        <li>Analytics</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- Optional: delete this line if you don't want it -->
+    <p class="footer-note">References available on request.</p>
+  </footer>
+
+</body>
+</html>
