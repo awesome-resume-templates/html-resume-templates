@@ -1,0 +1,227 @@
+/* ==========================================================
+   THEME — edit these variables to reskin the whole resume.
+   ========================================================== */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-primary: #0f766e;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+
+  /* A font stack with solid Arabic/Persian/Hebrew coverage in system
+     fonts, so this works offline with no font download. If you swap
+     to a different script, keep a similar fallback chain. */
+  --font-heading: -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+  --font-body: -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+
+  --spacing-unit: 8px;
+  --line-height-base: 1.7;
+  --page-max-width: 750px;
+}
+
+/* ==========================================================
+   BASE — every rule below uses logical (start/end, block/inline)
+   properties instead of left/right/top/bottom, so flipping the
+   <html dir="..."> attribute is the only thing needed for RTL/LTR.
+   ========================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding-block: calc(var(--spacing-unit) * 6);
+  padding-inline: calc(var(--spacing-unit) * 3);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: var(--line-height-base);
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+}
+
+p {
+  margin-block: calc(var(--spacing-unit) * 1);
+  margin-inline: 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+ul {
+  margin-block: calc(var(--spacing-unit) * 1);
+  margin-inline: 0;
+  padding-inline-start: calc(var(--spacing-unit) * 2.5);
+  padding-inline-end: 0;
+}
+
+li {
+  margin-block-end: calc(var(--spacing-unit) * 0.5);
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+#resume-header {
+  margin-block-end: calc(var(--spacing-unit) * 5);
+}
+
+#resume-header h1 {
+  font-size: 2rem;
+}
+
+#resume-header .title {
+  margin-block-start: calc(var(--spacing-unit) * 0.5);
+  color: var(--color-muted);
+  font-size: 1.1rem;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+  padding-inline-start: 0;
+  margin-block-start: calc(var(--spacing-unit) * 2);
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+.contact-list li {
+  margin-block-end: 0;
+}
+
+/* ==========================================================
+   SECTIONS
+   ========================================================== */
+main section {
+  margin-block-end: calc(var(--spacing-unit) * 5);
+  padding-block-start: calc(var(--spacing-unit) * 4);
+  border-block-start: 1px solid var(--color-border);
+}
+
+main section:first-of-type {
+  border-block-start: none;
+  padding-block-start: 0;
+}
+
+section h2 {
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  color: var(--color-muted);
+  margin-block-end: calc(var(--spacing-unit) * 2);
+}
+
+/* ==========================================================
+   EXPERIENCE / EDUCATION ENTRIES
+   ========================================================== */
+.entry + .entry {
+  margin-block-start: calc(var(--spacing-unit) * 3);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 2);
+}
+
+.entry-header h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.entry-org {
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.entry-date {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.entry ul {
+  margin-block-start: calc(var(--spacing-unit) * 1);
+}
+
+/* ==========================================================
+   SKILLS
+   ========================================================== */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 1);
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  background: #f0fdfa;
+  color: var(--color-primary);
+  border-radius: 6px;
+  padding-block: calc(var(--spacing-unit) * 0.5);
+  padding-inline: calc(var(--spacing-unit) * 1.25);
+  font-size: 0.85rem;
+  margin-block-end: 0;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================
+   RESPONSIVE — single column fallback under ~600px
+   ========================================================== */
+@media (max-width: 600px) {
+  body {
+    padding-block: calc(var(--spacing-unit) * 4);
+    padding-inline: calc(var(--spacing-unit) * 2.5);
+  }
+
+  #resume-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .entry-header {
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 0.25);
+  }
+}
+
+/* ==========================================================
+   PRINT
+   ========================================================== */
+@media print {
+  body {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  main section,
+  .entry {
+    break-inside: avoid;
+  }
+}
