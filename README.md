@@ -4,6 +4,9 @@
 [![GitHub stars](https://img.shields.io/github/stars/awesome-resume-templates/awesome-html-resume-templates?style=social)](https://github.com/awesome-resume-templates/awesome-html-resume-templates)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
 [![No build step](https://img.shields.io/badge/build%20step-none-blue.svg)](#how-to-use)
+[![Live gallery](https://img.shields.io/badge/live%20gallery-view%20demos-orange.svg)](https://awesome-resume-templates.github.io/awesome-html-resume-templates/)
+
+**[Browse the live gallery →](https://awesome-resume-templates.github.io/awesome-html-resume-templates/)**
 
 **Awesome HTML Resume Templates** is a free, open-source collection of 20
 hand-coded HTML and CSS resume templates you can download, customize, and use
