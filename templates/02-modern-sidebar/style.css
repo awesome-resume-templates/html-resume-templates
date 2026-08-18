@@ -1,0 +1,310 @@
+/* ==========================================================
+   THEME — edit these variables to reskin the whole resume.
+   ========================================================== */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-primary: #1d4ed8;          /* sidebar background / accent */
+  --color-primary-contrast: #ffffff; /* text color on top of --color-primary */
+  --color-muted: #6b7280;            /* dates, secondary text on white */
+  --color-border: #e5e7eb;
+
+  --font-heading: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-body: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  --spacing-unit: 8px;
+  --line-height-base: 1.6;
+  --page-max-width: 960px;
+
+  --sidebar-width: 260px;
+  --photo-size: 96px;
+  --photo-radius: 50%;   /* 50% = circle. Try 12px for rounded-square, 0 for square. */
+}
+
+/* ==========================================================
+   BASE
+   ========================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: var(--line-height-base);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+p {
+  margin: calc(var(--spacing-unit) * 1) 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================
+   PAGE LAYOUT — sidebar + main content
+   ========================================================== */
+.page {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+  min-height: 100vh;
+}
+
+/* ==========================================================
+   SIDEBAR
+   ========================================================== */
+#sidebar {
+  background: var(--color-primary);
+  color: var(--color-primary-contrast);
+  padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 3);
+}
+
+#sidebar h2 {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary-contrast);
+  opacity: 0.75;
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+}
+
+#sidebar section {
+  margin-top: calc(var(--spacing-unit) * 4);
+}
+
+#sidebar a {
+  color: var(--color-primary-contrast);
+}
+
+.photo {
+  width: var(--photo-size);
+  height: var(--photo-size);
+  border-radius: var(--photo-radius);
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+#resume-header .title {
+  margin-top: calc(var(--spacing-unit) * 0.5);
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+.contact-list li {
+  margin-bottom: calc(var(--spacing-unit) * 1);
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 0.75);
+}
+
+.skills-list li {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1.25);
+  font-size: 0.8rem;
+}
+
+.languages-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: calc(var(--spacing-unit) * 1);
+  font-size: 0.9rem;
+  margin-bottom: calc(var(--spacing-unit) * 0.75);
+}
+
+.languages-list .level {
+  opacity: 0.75;
+}
+
+/* ==========================================================
+   MAIN CONTENT
+   ========================================================== */
+main {
+  padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 4);
+}
+
+main section {
+  margin-bottom: calc(var(--spacing-unit) * 5);
+}
+
+main section:last-child {
+  margin-bottom: 0;
+}
+
+main h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  padding-bottom: calc(var(--spacing-unit) * 1);
+  border-bottom: 1px solid var(--color-border);
+}
+
+main a {
+  color: var(--color-primary);
+}
+
+/* ==========================================================
+   EXPERIENCE / EDUCATION ENTRIES
+   ========================================================== */
+.entry + .entry {
+  margin-top: calc(var(--spacing-unit) * 3);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 2);
+}
+
+.entry-header h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.entry-org {
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.entry-date {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.entry ul {
+  list-style: disc;
+  margin-top: calc(var(--spacing-unit) * 1);
+  padding-left: calc(var(--spacing-unit) * 2.5);
+}
+
+.entry li {
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+  padding: 0 calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 4);
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================
+   RESPONSIVE — single column fallback under ~600px
+   ========================================================== */
+@media (max-width: 600px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  #sidebar {
+    padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 2.5);
+  }
+
+  main {
+    padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 2.5);
+  }
+
+  footer {
+    padding: 0 calc(var(--spacing-unit) * 2.5) calc(var(--spacing-unit) * 3);
+  }
+
+  .entry-header {
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 0.25);
+  }
+}
+
+/* ==========================================================
+   PRINT — sidebar becomes a top block, not hidden
+   ========================================================== */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    display: block;
+    max-width: 100%;
+    min-height: 0;
+  }
+
+  #sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: calc(var(--spacing-unit) * 3);
+    padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 3);
+  }
+
+  #sidebar > * {
+    margin-top: 0;
+  }
+
+  .photo {
+    width: calc(var(--photo-size) * 0.6);
+    height: calc(var(--photo-size) * 0.6);
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+
+  main {
+    padding-top: calc(var(--spacing-unit) * 2);
+  }
+
+  main section {
+    margin-bottom: calc(var(--spacing-unit) * 3);
+  }
+
+  main section,
+  .entry {
+    break-inside: avoid;
+  }
+}
