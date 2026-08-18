@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane Doe — Resume</title>
+  <meta name="description" content="Infographic HTML resume template with visual skill bars — free, open source, easy to customize.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HOW TO CUSTOMIZE THIS TEMPLATE
+       1. Replace "Jane Doe" and every placeholder below with your
+          own information.
+       2. To change colors/fonts, edit the :root block at the top
+          of style.css.
+       3. Each skill bar's fill amount is controlled by the inline
+          --level style (0-100). Its aria-label carries the same
+          info as text, since a bar alone isn't reliably read by
+          screen readers or parsed by ATS software — keep both in
+          sync when you edit a skill.
+       4. Preview by opening this file in a browser. When it looks
+          right, use your browser's Print dialog → "Save as PDF".
+       ============================================================ -->
+
+  <header id="resume-header">
+    <h1><!-- Your full name --> Jane Doe</h1>
+    <p class="title"><!-- Your job title / target role --> UX Researcher</p>
+    <ul class="contact-list" aria-label="Contact information">
+      <li><a href="mailto:jane.doe@example.com">jane.doe@example.com</a></li>
+      <li><a href="tel:+15550123456">+1 (555) 012-3456</a></li>
+      <li>San Francisco, CA</li>
+    </ul>
+  </header>
+
+  <main>
+
+    <section id="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <!-- 2-3 sentence summary of who you are and what you're looking for -->
+      <p>
+        UX researcher with 6 years running mixed-methods studies that shape
+        product strategy at every stage from discovery to launch.
+      </p>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <!-- Copy this <li> once per skill. --level (0-100) controls the bar fill;
+           keep the number in the visible <span> and the aria-label in sync. -->
+      <ul class="skill-bars">
+        <li>
+          <div class="skill-bar-label">
+            <span>User Interviews</span>
+            <span class="skill-bar-value">90%</span>
+          </div>
+          <div class="skill-bar-track" role="img" aria-label="User Interviews: Advanced, 90 percent">
+            <div class="skill-bar-fill" style="--level: 90%;"></div>
+          </div>
+        </li>
+        <li>
+          <div class="skill-bar-label">
+            <span>Usability Testing</span>
+            <span class="skill-bar-value">85%</span>
+          </div>
+          <div class="skill-bar-track" role="img" aria-label="Usability Testing: Advanced, 85 percent">
+            <div class="skill-bar-fill" style="--level: 85%;"></div>
+          </div>
+        </li>
+        <li>
+          <div class="skill-bar-label">
+            <span>Survey Design</span>
+            <span class="skill-bar-value">75%</span>
+          </div>
+          <div class="skill-bar-track" role="img" aria-label="Survey Design: Proficient, 75 percent">
+            <div class="skill-bar-fill" style="--level: 75%;"></div>
+          </div>
+        </li>
+        <li>
+          <div class="skill-bar-label">
+            <span>Data Analysis (SQL)</span>
+            <span class="skill-bar-value">60%</span>
+          </div>
+          <div class="skill-bar-track" role="img" aria-label="Data Analysis (SQL): Intermediate, 60 percent">
+            <div class="skill-bar-fill" style="--level: 60%;"></div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+
+      <!-- Copy this <article> block once per job. Delete if not needed. -->
+      <article class="entry">
+        <div class="entry-header">
+          <h3>Senior UX Researcher <span class="entry-org">— Acme Inc.</span></h3>
+          <p class="entry-date">2021 — Present</p>
+        </div>
+        <ul>
+          <li>Ran 40+ studies a year, directly informing roadmap prioritization.</li>
+          <li>Built the team's first research repository, now used company-wide.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-header">
+          <h3>UX Researcher <span class="entry-org">— Globex Corp.</span></h3>
+          <p class="entry-date">2018 — 2021</p>
+        </div>
+        <ul>
+          <li>Partnered with product and design on quarterly usability testing cycles.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <!-- Copy this <article> block once per school. Delete if not needed. -->
+      <article class="entry">
+        <div class="entry-header">
+          <h3>B.S. in Human-Computer Interaction <span class="entry-org">— State University</span></h3>
+          <p class="entry-date">2014 — 2018</p>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- Optional: delete this line if you don't want it -->
+    <p class="footer-note">References available on request.</p>
+  </footer>
+
+</body>
+</html>
