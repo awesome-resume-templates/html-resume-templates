@@ -1,0 +1,241 @@
+/* ==========================================================
+   THEME — edit these variables to reskin the whole resume.
+   ========================================================== */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-primary: #0e7490;   /* accent — prompts, links, tags */
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-surface: #f1f5f9;
+
+  --font-heading: -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-body: -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  --spacing-unit: 8px;
+  --line-height-base: 1.6;
+  --page-max-width: 800px;
+}
+
+/* ==========================================================
+   BASE
+   ========================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: calc(var(--spacing-unit) * 6) calc(var(--spacing-unit) * 3);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: var(--line-height-base);
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+p {
+  margin: calc(var(--spacing-unit) * 1) 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+ul {
+  margin: calc(var(--spacing-unit) * 1) 0;
+  padding-left: calc(var(--spacing-unit) * 2.5);
+}
+
+li {
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+.prompt,
+.prompt-inline {
+  font-family: var(--font-mono);
+  color: var(--color-primary);
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+#resume-header {
+  margin-bottom: calc(var(--spacing-unit) * 5);
+}
+
+.prompt {
+  margin: 0 0 calc(var(--spacing-unit) * 1);
+  font-size: 0.9rem;
+}
+
+#resume-header h1 {
+  font-size: 2rem;
+}
+
+#resume-header .title {
+  margin-top: calc(var(--spacing-unit) * 0.5);
+  color: var(--color-muted);
+  font-size: 1.1rem;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+  padding: 0;
+  margin-top: calc(var(--spacing-unit) * 2);
+  font-size: 0.9rem;
+  font-family: var(--font-mono);
+}
+
+.contact-list li {
+  margin: 0;
+}
+
+/* ==========================================================
+   SECTIONS
+   ========================================================== */
+main section {
+  margin-bottom: calc(var(--spacing-unit) * 5);
+  padding-top: calc(var(--spacing-unit) * 4);
+  border-top: 1px solid var(--color-border);
+}
+
+main section:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+section h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--font-mono);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.prompt-inline {
+  font-weight: 700;
+  margin-right: calc(var(--spacing-unit) * 0.5);
+}
+
+/* ==========================================================
+   SKILLS — tag badges
+   ========================================================== */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 1);
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1.25);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* ==========================================================
+   EXPERIENCE / EDUCATION ENTRIES
+   ========================================================== */
+.entry + .entry {
+  margin-top: calc(var(--spacing-unit) * 3);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 2);
+}
+
+.entry-header h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.entry-org {
+  font-weight: 400;
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+}
+
+.entry-date {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+.entry ul {
+  margin-top: calc(var(--spacing-unit) * 1);
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================
+   RESPONSIVE — single column fallback under ~600px
+   ========================================================== */
+@media (max-width: 600px) {
+  body {
+    padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 2.5);
+  }
+
+  #resume-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .entry-header {
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 0.25);
+  }
+}
+
+/* ==========================================================
+   PRINT
+   ========================================================== */
+@media print {
+  body {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  main section {
+    break-inside: avoid;
+  }
+
+  .entry {
+    break-inside: avoid;
+  }
+}

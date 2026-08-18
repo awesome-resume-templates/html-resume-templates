@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane Doe — Resume</title>
+  <meta name="description" content="ATS-friendly HTML resume template — free, open source, built to parse cleanly in applicant tracking systems.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HOW TO CUSTOMIZE THIS TEMPLATE
+       1. Replace "Jane Doe" and every placeholder below with your
+          own information.
+       2. To change the accent color/font, edit the :root block at
+          the top of style.css.
+       3. To add/remove a job, school, or skill, copy or delete one
+          <li>/<article> block — each is self-contained.
+       4. Preview by opening this file in a browser. When it looks
+          right, use your browser's Print dialog → "Save as PDF".
+
+       WHY THIS TEMPLATE LOOKS PLAIN
+       Applicant Tracking Systems (ATS) parse resumes by reading text
+       in document order. Tables, multi-column layouts, text-in-images,
+       and icon fonts often get scrambled or dropped by that parsing.
+       This template intentionally avoids all of that: one column,
+       real semantic headings, plain text — nothing for a parser to
+       misread. Keep it that way if ATS compatibility matters to you.
+       ============================================================ -->
+
+  <header id="resume-header">
+    <h1><!-- Your full name --> Jane Doe</h1>
+    <p class="title"><!-- Your job title / target role --> Operations Manager</p>
+    <p class="contact-line">
+      <!-- Keep contact info on one line, plain text, no icons -->
+      jane.doe@example.com &nbsp;|&nbsp; +1 (555) 012-3456 &nbsp;|&nbsp; San Francisco, CA
+    </p>
+  </header>
+
+  <main>
+
+    <section id="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <!-- 2-3 sentence summary of who you are and what you're looking for -->
+      <p>
+        Operations manager with 8+ years leading cross-functional teams through
+        process redesign, vendor management, and budget planning. Track record
+        of reducing operating costs while improving delivery times.
+      </p>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+
+      <!-- Copy this <article> block once per job. Delete if not needed. -->
+      <article class="entry">
+        <h3>Operations Manager, Acme Inc. — San Francisco, CA</h3>
+        <p class="entry-date">March 2021 to Present</p>
+        <ul>
+          <li>Reduced fulfillment costs by 18% by renegotiating vendor contracts and consolidating suppliers.</li>
+          <li>Managed a team of 12 across three regional warehouses.</li>
+          <li>Implemented a new inventory tracking process that cut stock discrepancies by 40%.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <h3>Operations Coordinator, Globex Corp. — San Francisco, CA</h3>
+        <p class="entry-date">June 2017 to March 2021</p>
+        <ul>
+          <li>Coordinated logistics for over 200 shipments per month.</li>
+          <li>Built the team's first standard operating procedure documentation.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+
+      <!-- Copy this <article> block once per school. Delete if not needed. -->
+      <article class="entry">
+        <h3>B.S. in Business Administration, State University</h3>
+        <p class="entry-date">2013 to 2017</p>
+      </article>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <!-- Plain comma-separated text — the most reliably parsed format -->
+      <p>Operations Management, Vendor Negotiation, Budget Planning, Process Improvement, Inventory Management, Team Leadership</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- Optional: delete this line if you don't want it -->
+    <p class="footer-note">References available on request.</p>
+  </footer>
+
+</body>
+</html>
