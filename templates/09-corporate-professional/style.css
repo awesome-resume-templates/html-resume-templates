@@ -1,0 +1,235 @@
+/* ==========================================================
+   THEME — edit these variables to reskin the whole resume.
+   ========================================================== */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1f2937;
+  --color-primary: #1e3a5f;   /* navy accent — headings, header bar */
+  --color-muted: #6b7280;
+  --color-border: #d1d5db;
+  --color-surface: #f3f4f6;
+
+  --font-heading: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-body: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  --spacing-unit: 8px;
+  --line-height-base: 1.6;
+  --page-max-width: 900px;
+}
+
+/* ==========================================================
+   BASE
+   ========================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: var(--line-height-base);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+p {
+  margin: calc(var(--spacing-unit) * 1) 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+#resume-header {
+  background: var(--color-primary);
+  color: #ffffff;
+  padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 4);
+}
+
+#resume-header h1 {
+  font-size: 2rem;
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+}
+
+#resume-header .title {
+  max-width: var(--page-max-width);
+  margin: calc(var(--spacing-unit) * 0.5) auto 0;
+  opacity: 0.85;
+  font-size: 1.1rem;
+}
+
+/* ==========================================================
+   GRID LAYOUT — main content + compact "at a glance" column
+   ========================================================== */
+.grid-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: calc(var(--spacing-unit) * 5);
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+  padding: calc(var(--spacing-unit) * 4);
+}
+
+main section,
+aside section {
+  margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+main section:last-child,
+aside section:last-child {
+  margin-bottom: 0;
+}
+
+section h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  padding-bottom: calc(var(--spacing-unit) * 1);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+aside section h2 {
+  border-bottom: 2px solid var(--color-border);
+  color: var(--color-text);
+}
+
+/* ==========================================================
+   EXPERIENCE / EDUCATION ENTRIES
+   ========================================================== */
+.entry + .entry {
+  margin-top: calc(var(--spacing-unit) * 3);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 2);
+}
+
+.entry-header h3 {
+  font-size: 1.05rem;
+}
+
+.entry-org {
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.entry-date {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+main .entry ul {
+  list-style: disc;
+  margin-top: calc(var(--spacing-unit) * 1);
+  padding-left: calc(var(--spacing-unit) * 2.5);
+}
+
+main .entry li {
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+aside .entry h3 {
+  font-size: 0.95rem;
+}
+
+aside .entry .entry-org,
+aside .entry .entry-date {
+  font-size: 0.85rem;
+  margin: calc(var(--spacing-unit) * 0.25) 0 0;
+}
+
+/* ==========================================================
+   SIDEBAR LISTS
+   ========================================================== */
+.contact-list li,
+.plain-list li {
+  font-size: 0.9rem;
+  margin-bottom: calc(var(--spacing-unit) * 1);
+  word-break: break-word;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+  padding: 0 calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 4);
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================
+   RESPONSIVE — single column fallback under ~600px
+   ========================================================== */
+@media (max-width: 600px) {
+  #resume-header {
+    padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 2.5);
+  }
+
+  .grid-row {
+    grid-template-columns: 1fr;
+    padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 2.5);
+    gap: calc(var(--spacing-unit) * 4);
+  }
+
+  footer {
+    padding: 0 calc(var(--spacing-unit) * 2.5) calc(var(--spacing-unit) * 3);
+  }
+
+  .entry-header {
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 0.25);
+  }
+}
+
+/* ==========================================================
+   PRINT
+   ========================================================== */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .grid-row {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  main section,
+  aside section,
+  .entry {
+    break-inside: avoid;
+  }
+}

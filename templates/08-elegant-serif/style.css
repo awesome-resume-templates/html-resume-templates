@@ -1,0 +1,199 @@
+/* ==========================================================
+   THEME — edit these variables to reskin the whole resume.
+   ========================================================== */
+:root {
+  --color-bg: #fffdf8;
+  --color-text: #262220;
+  --color-primary: #7f1d1d;   /* burgundy accent — used sparingly */
+  --color-muted: #6b6560;
+  --color-border: #d8d0c4;
+
+  /* Free Google Font pairings that work well here (self-host or link
+     from fonts.googleapis.com if you want one — this default uses a
+     system serif so the template works fully offline):
+       "Playfair Display" (headings) + "Lora" (body)
+       "Cormorant Garamond" (headings) + "EB Garamond" (body) */
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-body: Georgia, "Times New Roman", serif;
+
+  --spacing-unit: 8px;
+  --line-height-base: 1.6;
+  --page-max-width: 700px;
+}
+
+/* ==========================================================
+   BASE
+   ========================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: calc(var(--spacing-unit) * 7) calc(var(--spacing-unit) * 3);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: var(--line-height-base);
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0;
+}
+
+p {
+  margin: calc(var(--spacing-unit) * 1) 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: calc(var(--spacing-unit) * 4) 0;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+#resume-header {
+  text-align: center;
+}
+
+#resume-header h1 {
+  font-size: 2.25rem;
+  letter-spacing: 0.02em;
+}
+
+#resume-header .title {
+  margin-top: calc(var(--spacing-unit) * 1);
+  color: var(--color-primary);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.contact-line {
+  margin-top: calc(var(--spacing-unit) * 2);
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================
+   SECTIONS
+   ========================================================== */
+main section {
+  margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+section h2 {
+  font-size: 1.15rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-primary);
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
+}
+
+/* ==========================================================
+   EXPERIENCE / EDUCATION ENTRIES
+   ========================================================== */
+.entry + .entry {
+  margin-top: calc(var(--spacing-unit) * 3);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 2);
+}
+
+.entry-header h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.entry-org {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+.entry-date {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.entry ul {
+  list-style: disc;
+  margin-top: calc(var(--spacing-unit) * 1);
+  padding-left: calc(var(--spacing-unit) * 2.5);
+}
+
+.entry li {
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+/* ==========================================================
+   SKILLS
+   ========================================================== */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 3);
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* ==========================================================
+   RESPONSIVE — single column fallback under ~600px
+   ========================================================== */
+@media (max-width: 600px) {
+  body {
+    padding: calc(var(--spacing-unit) * 5) calc(var(--spacing-unit) * 2.5);
+  }
+
+  #resume-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .entry-header {
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 0.25);
+  }
+}
+
+/* ==========================================================
+   PRINT
+   ========================================================== */
+@media print {
+  body {
+    padding: 0;
+    max-width: 100%;
+    background: #ffffff;
+  }
+
+  main section,
+  .entry {
+    break-inside: avoid;
+  }
+}
