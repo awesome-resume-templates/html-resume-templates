@@ -1,0 +1,242 @@
+/* ==========================================================
+   THEME — edit these variables to reskin the whole resume.
+   ========================================================== */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-primary: #7c3aed;   /* bold accent — stat numbers, links */
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+
+  --font-heading: -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-body: -apple-system, "Helvetica Neue", Arial, sans-serif;
+
+  --spacing-unit: 8px;
+  --line-height-base: 1.6;
+  --page-max-width: 800px;
+}
+
+/* ==========================================================
+   BASE
+   ========================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: calc(var(--spacing-unit) * 6) calc(var(--spacing-unit) * 3);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: var(--line-height-base);
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+}
+
+p {
+  margin: calc(var(--spacing-unit) * 1) 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  margin: calc(var(--spacing-unit) * 1) 0;
+  padding: 0;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+#resume-header h1 {
+  font-size: 2.25rem;
+}
+
+#resume-header .title {
+  margin-top: calc(var(--spacing-unit) * 1);
+  color: var(--color-muted);
+  font-size: 1.15rem;
+  max-width: 55ch;
+}
+
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+  margin-top: calc(var(--spacing-unit) * 2);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================
+   STATS ROW
+   ========================================================== */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 4);
+  margin: calc(var(--spacing-unit) * 5) 0;
+  padding: calc(var(--spacing-unit) * 3) 0;
+  border-top: 2px solid var(--color-border);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.stats li {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.stat-label {
+  margin-top: calc(var(--spacing-unit) * 0.75);
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================
+   SECTIONS
+   ========================================================== */
+main section {
+  margin-bottom: calc(var(--spacing-unit) * 5);
+}
+
+section h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+/* ==========================================================
+   EXPERIENCE / EDUCATION ENTRIES
+   ========================================================== */
+.entry + .entry {
+  margin-top: calc(var(--spacing-unit) * 3);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 2);
+}
+
+.entry-header h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.entry-org {
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.entry-date {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.entry ul {
+  list-style: disc;
+  margin-top: calc(var(--spacing-unit) * 1);
+  padding-left: calc(var(--spacing-unit) * 2.5);
+}
+
+.entry li {
+  display: list-item;
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+/* ==========================================================
+   SKILLS
+   ========================================================== */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 1);
+}
+
+.skills-list li {
+  background: #f5f3ff;
+  color: var(--color-primary);
+  border-radius: 999px;
+  padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1.5);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================
+   RESPONSIVE — single column fallback + stats stack under ~600px
+   ========================================================== */
+@media (max-width: 600px) {
+  body {
+    padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 2.5);
+  }
+
+  #resume-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 2.5);
+  }
+
+  .entry-header {
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 0.25);
+  }
+}
+
+/* ==========================================================
+   PRINT
+   ========================================================== */
+@media print {
+  body {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .stats {
+    gap: calc(var(--spacing-unit) * 3);
+  }
+
+  main section,
+  .entry {
+    break-inside: avoid;
+  }
+}

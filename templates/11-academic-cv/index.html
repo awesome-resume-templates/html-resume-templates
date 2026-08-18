@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane Doe — Curriculum Vitae</title>
+  <meta name="description" content="Academic CV HTML template — free, open source, easy to customize.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HOW TO CUSTOMIZE THIS TEMPLATE
+       1. Replace "Jane Doe" and every placeholder below with your
+          own information.
+       2. To change colors/fonts, edit the :root block at the top
+          of style.css.
+       3. To add/remove an entry in any section, copy or delete one
+          <li>/<article> block — each is self-contained.
+       4. This CV is expected to run multiple pages — that's normal.
+          Each publication/entry has break-inside: avoid so it never
+          splits awkwardly across a page.
+       5. Preview by opening this file in a browser. When it looks
+          right, use your browser's Print dialog → "Save as PDF".
+       ============================================================ -->
+
+  <header id="resume-header">
+    <h1><!-- Your full name --> Jane Doe, Ph.D.</h1>
+    <p class="title"><!-- Your field / role --> Assistant Professor of Cognitive Science</p>
+    <ul class="contact-list" aria-label="Contact information">
+      <li><a href="mailto:jane.doe@example.edu">jane.doe@example.edu</a></li>
+      <li>Department of Psychology, State University</li>
+    </ul>
+  </header>
+
+  <main>
+
+    <section id="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <!-- Copy this <article> block once per degree. Delete if not needed. -->
+      <article class="entry">
+        <div class="entry-header">
+          <h3>Ph.D. in Cognitive Science <span class="entry-org">— State University</span></h3>
+          <p class="entry-date">2015 — 2020</p>
+        </div>
+        <p class="entry-detail">Dissertation: "Attention and Memory Under Divided Load"</p>
+      </article>
+      <article class="entry">
+        <div class="entry-header">
+          <h3>B.A. in Psychology <span class="entry-org">— Coastal University</span></h3>
+          <p class="entry-date">2011 — 2015</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="research" aria-labelledby="research-heading">
+      <h2 id="research-heading">Research Experience</h2>
+      <!-- Copy this <article> block once per position. Delete if not needed. -->
+      <article class="entry">
+        <div class="entry-header">
+          <h3>Postdoctoral Researcher <span class="entry-org">— State University</span></h3>
+          <p class="entry-date">2020 — 2022</p>
+        </div>
+        <ul>
+          <li>Led a 3-year NSF-funded study on divided attention in working memory.</li>
+          <li>Supervised 4 graduate research assistants.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="publications" aria-labelledby="publications-heading">
+      <h2 id="publications-heading">Publications</h2>
+      <!-- Paste one citation per <li>. Numbering is automatic. -->
+      <ol class="publications-list">
+        <li>Doe, J., &amp; Smith, A. (2023). Divided attention under cognitive load. <em>Journal of Cognitive Psychology, 45</em>(2), 112–130.</li>
+        <li>Doe, J. (2022). Working memory capacity across the lifespan. <em>Psychological Science Review, 12</em>(4), 88–104.</li>
+        <li>Doe, J., Lee, K., &amp; Smith, A. (2021). Attention allocation in dual-task paradigms. <em>Proceedings of the Annual Cognitive Science Conference</em>, 200–207.</li>
+      </ol>
+    </section>
+
+    <section id="teaching" aria-labelledby="teaching-heading">
+      <h2 id="teaching-heading">Teaching Experience</h2>
+      <!-- Copy this <article> block once per course. Delete if not needed. -->
+      <article class="entry">
+        <div class="entry-header">
+          <h3>Introduction to Cognitive Science <span class="entry-org">— State University</span></h3>
+          <p class="entry-date">2021 — Present</p>
+        </div>
+      </article>
+      <article class="entry">
+        <div class="entry-header">
+          <h3>Research Methods in Psychology <span class="entry-org">— State University</span></h3>
+          <p class="entry-date">2020 — 2021</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="grants" aria-labelledby="grants-heading">
+      <h2 id="grants-heading">Grants &amp; Awards</h2>
+      <!-- One item per <li>. Add or remove freely. -->
+      <ul class="plain-list">
+        <li>NSF Early Career Research Grant, 2022 — $180,000</li>
+        <li>State University Dissertation Fellowship, 2019</li>
+        <li>Outstanding Graduate Student Award, 2018</li>
+      </ul>
+    </section>
+
+    <section id="conferences" aria-labelledby="conferences-heading">
+      <h2 id="conferences-heading">Selected Conference Presentations</h2>
+      <!-- One item per <li>. Add or remove freely. -->
+      <ul class="plain-list">
+        <li>Doe, J. (2023). "Attention Under Load." Annual Cognitive Science Conference, Chicago, IL.</li>
+        <li>Doe, J. (2022). "Working Memory Across the Lifespan." Society for Psychological Science, Boston, MA.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- Optional: delete this line if you don't want it -->
+    <p class="footer-note">References available on request.</p>
+  </footer>
+
+</body>
+</html>
