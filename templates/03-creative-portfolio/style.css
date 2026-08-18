@@ -1,0 +1,300 @@
+/* ==========================================================
+   THEME — edit these variables to reskin the whole resume.
+   ========================================================== */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-primary: #e0402c;   /* bold accent — hero, headings, links */
+  --color-primary-contrast: #ffffff;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-surface: #f4f4f5;   /* portfolio thumb background */
+
+  /* Bold system-font stack by default. Swap in a self-hosted display
+     font here (e.g. @font-face at the top of this file) for more
+     personality — keep a system fallback so the page still works
+     offline / without extra downloads. */
+  --font-heading: -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-body: -apple-system, "Helvetica Neue", Arial, sans-serif;
+
+  --spacing-unit: 8px;
+  --line-height-base: 1.6;
+  --page-max-width: 960px;
+}
+
+/* ==========================================================
+   BASE
+   ========================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: var(--line-height-base);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+}
+
+p {
+  margin: calc(var(--spacing-unit) * 1) 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main,
+footer {
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+  padding: 0 calc(var(--spacing-unit) * 4);
+}
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+.hero {
+  background: var(--color-primary);
+  color: var(--color-primary-contrast);
+  padding: calc(var(--spacing-unit) * 8) calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 6);
+  margin-bottom: calc(var(--spacing-unit) * 6);
+}
+
+.hero-inner,
+.hero {
+  max-width: var(--page-max-width);
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: -0.02em;
+}
+
+.hero .title {
+  margin-top: calc(var(--spacing-unit) * 1);
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.hero .contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 3);
+  margin-top: calc(var(--spacing-unit) * 3);
+  font-size: 0.95rem;
+}
+
+.hero a {
+  color: var(--color-primary-contrast);
+}
+
+/* ==========================================================
+   ASYMMETRIC GRID — About/Skills (narrow) + Experience (wide)
+   ========================================================== */
+.grid-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: calc(var(--spacing-unit) * 5);
+  margin-bottom: calc(var(--spacing-unit) * 6);
+}
+
+/* ==========================================================
+   SECTIONS
+   ========================================================== */
+main section {
+  margin-bottom: calc(var(--spacing-unit) * 5);
+}
+
+.grid-narrow section {
+  margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+section h2 {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 1);
+}
+
+.skills-list li {
+  background: var(--color-surface);
+  border-radius: 6px;
+  padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1.25);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================
+   EXPERIENCE / EDUCATION ENTRIES
+   ========================================================== */
+.entry + .entry {
+  margin-top: calc(var(--spacing-unit) * 3);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 2);
+}
+
+.entry-header h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.entry-org {
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.entry-date {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.entry ul {
+  list-style: disc;
+  margin-top: calc(var(--spacing-unit) * 1);
+  padding-left: calc(var(--spacing-unit) * 2.5);
+}
+
+.entry li {
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+/* ==========================================================
+   SELECTED WORK
+   ========================================================== */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--spacing-unit) * 2.5);
+}
+
+.work-item a {
+  display: block;
+  color: var(--color-text);
+}
+
+.work-item a:hover .work-thumb {
+  outline: 2px solid var(--color-primary);
+}
+
+.work-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  border-radius: 8px;
+  margin-bottom: calc(var(--spacing-unit) * 1);
+}
+
+.work-title {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  padding-bottom: calc(var(--spacing-unit) * 4);
+}
+
+/* ==========================================================
+   RESPONSIVE — single column fallback under ~600px
+   ========================================================== */
+@media (max-width: 600px) {
+  .hero {
+    padding: calc(var(--spacing-unit) * 5) calc(var(--spacing-unit) * 2.5) calc(var(--spacing-unit) * 4);
+  }
+
+  main,
+  footer {
+    padding-left: calc(var(--spacing-unit) * 2.5);
+    padding-right: calc(var(--spacing-unit) * 2.5);
+  }
+
+  .grid-row {
+    grid-template-columns: 1fr;
+    gap: calc(var(--spacing-unit) * 4);
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .entry-header {
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 0.25);
+  }
+}
+
+/* ==========================================================
+   PRINT — flatten color blocks, keep it print-safe
+   ========================================================== */
+@media print {
+  .hero {
+    background: none;
+    color: var(--color-text);
+    padding: 0 0 calc(var(--spacing-unit) * 3);
+    margin-bottom: calc(var(--spacing-unit) * 4);
+    border-bottom: 2px solid var(--color-text);
+  }
+
+  .hero a,
+  .hero .title {
+    color: var(--color-text);
+  }
+
+  .work-thumb {
+    background: none;
+    border: 1px solid var(--color-border);
+  }
+
+  .grid-row {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  main section,
+  .entry {
+    break-inside: avoid;
+  }
+}

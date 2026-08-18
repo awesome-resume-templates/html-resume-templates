@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane Doe — Resume</title>
+  <meta name="description" content="Creative HTML resume template for designers — free, open source, easy to customize.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HOW TO CUSTOMIZE THIS TEMPLATE
+       1. Replace "Jane Doe" and every placeholder below with your
+          own information.
+       2. To change colors/fonts, edit the :root block at the top of
+          style.css. --font-heading defaults to a bold system font;
+          swap in a self-hosted display font there if you want one.
+       3. To add/remove a job, portfolio piece, or skill, copy or
+          delete one <li>/<article> block — each is self-contained.
+       4. Preview by opening this file in a browser. When it looks
+          right, use your browser's Print dialog → "Save as PDF".
+       ============================================================ -->
+
+  <header id="resume-header" class="hero">
+    <h1><!-- Your full name --> Jane Doe</h1>
+    <p class="title"><!-- Your job title / target role --> Visual Designer</p>
+    <ul class="contact-list" aria-label="Contact information">
+      <li><a href="mailto:jane.doe@example.com">jane.doe@example.com</a></li>
+      <li><a href="https://example.com">example.com</a></li>
+      <li>San Francisco, CA</li>
+    </ul>
+  </header>
+
+  <main>
+    <div class="grid-row">
+
+      <div class="grid-narrow">
+        <section id="summary" aria-labelledby="summary-heading">
+          <h2 id="summary-heading">About</h2>
+          <!-- 2-3 sentence summary of who you are and what you're looking for -->
+          <p>
+            Visual designer who turns bold ideas into interfaces people remember.
+            I care about type, motion, and the small details most people skip.
+          </p>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Skills</h2>
+          <!-- One skill per <li>. Add or remove freely. -->
+          <ul class="skills-list">
+            <li>Art Direction</li>
+            <li>Branding</li>
+            <li>Illustration</li>
+            <li>Figma</li>
+            <li>Motion Design</li>
+            <li>HTML &amp; CSS</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="grid-wide">
+        <section id="experience" aria-labelledby="experience-heading">
+          <h2 id="experience-heading">Experience</h2>
+
+          <!-- Copy this <article> block once per job. Delete if not needed. -->
+          <article class="entry">
+            <div class="entry-header">
+              <h3>Senior Visual Designer <span class="entry-org">— Acme Studio</span></h3>
+              <p class="entry-date">2022 — Present</p>
+            </div>
+            <ul>
+              <li>Led rebrand of the flagship product, shipping a new visual identity across web and app.</li>
+              <li>Directed a team of 3 designers on campaign and marketing site work.</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-header">
+              <h3>Designer <span class="entry-org">— Globex Creative</span></h3>
+              <p class="entry-date">2019 — 2022</p>
+            </div>
+            <ul>
+              <li>Designed illustration systems for 12+ client campaigns.</li>
+              <li>Built the studio's first shared component library.</li>
+            </ul>
+          </article>
+        </section>
+      </div>
+
+    </div>
+
+    <section id="work" aria-labelledby="work-heading">
+      <h2 id="work-heading">Selected Work</h2>
+      <!-- Copy this <li> once per portfolio piece. Delete if not needed. -->
+      <ul class="work-grid">
+        <li class="work-item">
+          <a href="https://example.com/project-one">
+            <span class="work-thumb" aria-hidden="true">01</span>
+            <span class="work-title">Project One — Brand Identity</span>
+          </a>
+        </li>
+        <li class="work-item">
+          <a href="https://example.com/project-two">
+            <span class="work-thumb" aria-hidden="true">02</span>
+            <span class="work-title">Project Two — App Redesign</span>
+          </a>
+        </li>
+        <li class="work-item">
+          <a href="https://example.com/project-three">
+            <span class="work-thumb" aria-hidden="true">03</span>
+            <span class="work-title">Project Three — Campaign Site</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <!-- Copy this <article> block once per school. Delete if not needed. -->
+      <article class="entry">
+        <div class="entry-header">
+          <h3>B.F.A. in Visual Communication <span class="entry-org">— State University</span></h3>
+          <p class="entry-date">2015 — 2019</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Optional: delete this line if you don't want it -->
+    <p class="footer-note">References available on request.</p>
+  </footer>
+
+</body>
+</html>
