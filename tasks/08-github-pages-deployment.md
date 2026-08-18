@@ -14,5 +14,5 @@ Host the `docs/` gallery site publicly and make sure search engines can find and
    can perform.
 
 ## Acceptance criteria
-- `https://<org>.github.io/awesome-html-resume-templates/` loads the gallery.
+- `https://<org>.github.io/html-resume-templates/` loads the gallery.
 - `sitemap.xml` and `robots.txt` are both reachable and valid.

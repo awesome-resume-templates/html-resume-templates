@@ -5,7 +5,7 @@ Create the skeleton directory layout so every later task has a home.
 
 ## Structure
 ```
-awesome-html-resume-templates/
+html-resume-templates/
 ├── README.md
 ├── LICENSE
 ├── CONTRIBUTING.md

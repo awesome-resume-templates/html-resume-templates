@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://awesome-resume-templates.github.io/awesome-html-resume-templates/sitemap.xml
+Sitemap: https://awesome-resume-templates.github.io/html-resume-templates/sitemap.xml

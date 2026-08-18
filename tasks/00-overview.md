@@ -1,7 +1,7 @@
 # Task 00 — Project Overview & Tech Decisions
 
 ## Goal
-Build **awesome-html-resume-templates**: a free, open-source collection of 20
+Build **html-resume-templates**: a free, open-source collection of 20
 hand-crafted HTML/CSS resume templates, packaged in a repo that ranks well for
 "html resume templates" and "free html resume templates", and that a non-developer
 can customize by editing plain text in a file.

@@ -1,6 +1,6 @@
 # Project Task Breakdown
 
-Implementation plan for **awesome-html-resume-templates**, split into small, independent
+Implementation plan for **html-resume-templates**, split into small, independent
 tasks. Work through the core tasks roughly in order; the 20 template tasks in
 `templates/` can be done in any order, in parallel, or by different contributors.
 
