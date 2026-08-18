@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane Doe — Resume</title>
+  <meta name="description" content="Minimalist HTML resume template — free, open source, easy to customize.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HOW TO CUSTOMIZE THIS TEMPLATE
+       1. Replace "Jane Doe" and every placeholder below with your
+          own information.
+       2. To change colors/fonts, edit the :root block at the top
+          of style.css — you don't need to touch anything else.
+       3. To add or remove a job/school/skill, copy or delete one
+          <li> (or <article>) block — each one is self-contained.
+       4. Preview by opening this file in a browser. When it looks
+          right, use your browser's Print dialog → "Save as PDF".
+       ============================================================ -->
+
+  <header id="resume-header">
+    <h1><!-- Your full name --> Jane Doe</h1>
+    <p class="title"><!-- Your job title / target role --> Product Designer</p>
+
+    <ul class="contact-list" aria-label="Contact information">
+      <!-- Keep, edit, or delete any of these contact lines -->
+      <li><a href="mailto:jane.doe@example.com">jane.doe@example.com</a></li>
+      <li><a href="tel:+15550123456">+1 (555) 012-3456</a></li>
+      <li>San Francisco, CA</li>
+      <li><a href="https://example.com">example.com</a></li>
+    </ul>
+  </header>
+
+  <main>
+
+    <section id="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <!-- 2-3 sentence summary of who you are and what you're looking for -->
+      <p>
+        Product designer with 6+ years of experience turning complex workflows
+        into simple, usable interfaces. Focused on accessibility, clear
+        typography, and shipping fast without sacrificing craft.
+      </p>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+
+      <!-- Copy this <article> block once per job. Delete if not needed. -->
+      <article class="entry">
+        <div class="entry-header">
+          <h3>Senior Product Designer <span class="entry-org">— Acme Inc.</span></h3>
+          <p class="entry-date">2022 — Present</p>
+        </div>
+        <ul>
+          <li>Led the redesign of the core dashboard, reducing task completion time by 30%.</li>
+          <li>Built and maintained a shared component library used by 4 product teams.</li>
+          <li>Mentored two junior designers through their first shipped features.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-header">
+          <h3>Product Designer <span class="entry-org">— Globex Corp.</span></h3>
+          <p class="entry-date">2019 — 2022</p>
+        </div>
+        <ul>
+          <li>Designed the onboarding flow that lifted activation rate from 41% to 58%.</li>
+          <li>Ran and synthesized 50+ user interviews to guide the product roadmap.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+
+      <!-- Copy this <article> block once per school. Delete if not needed. -->
+      <article class="entry">
+        <div class="entry-header">
+          <h3>B.A. in Graphic Design <span class="entry-org">— State University</span></h3>
+          <p class="entry-date">2015 — 2019</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <!-- One skill per <li>. Add or remove freely. -->
+      <ul class="skills-list">
+        <li>UX/UI Design</li>
+        <li>Design Systems</li>
+        <li>Figma</li>
+        <li>User Research</li>
+        <li>Prototyping</li>
+        <li>HTML &amp; CSS</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- Optional: delete this line if you don't want it -->
+    <p class="footer-note">References available on request.</p>
+  </footer>
+
+</body>
+</html>
