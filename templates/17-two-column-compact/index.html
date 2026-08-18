@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane Doe — Resume</title>
+  <meta name="description" content="One-page compact HTML resume template — free, open source, easy to customize.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HOW TO CUSTOMIZE THIS TEMPLATE
+       1. Replace "Jane Doe" and every placeholder below with your
+          own information.
+       2. Content not fitting on one page? Nudge --spacing-unit and
+          --font-size-base down slightly at the top of style.css —
+          those two variables control almost all vertical rhythm.
+       3. To add/remove a job/school/skill, copy or delete one
+          <li>/<article> block — each is self-contained.
+       4. Preview by opening this file in a browser. When it looks
+          right, use your browser's Print dialog → "Save as PDF".
+       ============================================================ -->
+
+  <header id="resume-header">
+    <h1><!-- Your full name --> Jane Doe</h1>
+    <p class="title"><!-- Your job title / target role --> Registered Nurse</p>
+    <ul class="contact-list" aria-label="Contact information">
+      <li><a href="mailto:jane.doe@example.com">jane.doe@example.com</a></li>
+      <li><a href="tel:+15550123456">+1 (555) 012-3456</a></li>
+      <li>San Francisco, CA</li>
+    </ul>
+  </header>
+
+  <div class="grid-row">
+
+    <div class="col">
+      <section id="summary" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Summary</h2>
+        <!-- 2-3 sentence summary of who you are and what you're looking for -->
+        <p>
+          Registered nurse with 5 years in fast-paced emergency department
+          settings, focused on triage accuracy and calm patient communication.
+        </p>
+      </section>
+
+      <section id="experience" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Experience</h2>
+
+        <!-- Copy this <article> block once per job. Delete if not needed. -->
+        <article class="entry">
+          <div class="entry-header">
+            <h3>ED Nurse <span class="entry-org">— Acme Medical Center</span></h3>
+            <p class="entry-date">2022 — Present</p>
+          </div>
+          <ul>
+            <li>Triage 20+ patients per shift in a level II trauma center.</li>
+            <li>Precept new graduate nurses during onboarding.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-header">
+            <h3>Staff Nurse <span class="entry-org">— Globex Hospital</span></h3>
+            <p class="entry-date">2019 — 2022</p>
+          </div>
+          <ul>
+            <li>Provided direct care on a 30-bed medical-surgical unit.</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+
+    <div class="col">
+      <section id="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <!-- One skill per <li>. Add or remove freely. -->
+        <ul class="skills-list">
+          <li>Triage</li>
+          <li>ACLS / BLS Certified</li>
+          <li>EPIC EMR</li>
+          <li>IV Therapy</li>
+          <li>Patient Education</li>
+        </ul>
+      </section>
+
+      <section id="education" aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+        <!-- Copy this <article> block once per school. Delete if not needed. -->
+        <article class="entry">
+          <div class="entry-header">
+            <h3>B.S.N. <span class="entry-org">— State University</span></h3>
+            <p class="entry-date">2015 — 2019</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="licenses" aria-labelledby="licenses-heading">
+        <h2 id="licenses-heading">Licenses</h2>
+        <!-- One item per <li>. Add or remove freely. -->
+        <ul class="skills-list">
+          <li>RN License, State of California</li>
+        </ul>
+      </section>
+    </div>
+
+  </div>
+
+  <footer>
+    <!-- Optional: delete this line if you don't want it -->
+    <p class="footer-note">References available on request.</p>
+  </footer>
+
+</body>
+</html>

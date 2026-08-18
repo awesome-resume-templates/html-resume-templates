@@ -1,0 +1,203 @@
+/* ==========================================================
+   THEME — edit these variables to reskin the whole resume.
+   ========================================================== */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-primary: #0f4c81;
+  --color-muted: #595959;
+  --color-border: #d9d9d9;
+
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-body: Arial, Helvetica, sans-serif;
+
+  --spacing-unit: 8px;
+  --line-height-base: 1.5;
+  --page-max-width: 750px;
+}
+
+/* Printing on A4 instead of US Letter? Change `size: letter;` below
+   to `size: A4;`. (CSS custom properties aren't reliably supported
+   inside @page across browsers, so this is a manual one-line swap
+   rather than a --variable.) */
+@page {
+  size: letter;
+  margin: 0.75in;
+}
+
+/* ==========================================================
+   BASE
+   ========================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: calc(var(--spacing-unit) * 6) calc(var(--spacing-unit) * 3);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: var(--line-height-base);
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+  orphans: 3;
+  widows: 3;
+}
+
+p {
+  margin: calc(var(--spacing-unit) * 1) 0;
+  orphans: 3;
+  widows: 3;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+#resume-header {
+  margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+#resume-header h1 {
+  font-size: 1.7rem;
+  color: var(--color-primary);
+}
+
+#resume-header .title {
+  margin-top: calc(var(--spacing-unit) * 0.5);
+  color: var(--color-muted);
+  font-size: 1rem;
+}
+
+.contact-line {
+  margin-top: calc(var(--spacing-unit) * 1.5);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* ==========================================================
+   SECTIONS
+   ========================================================== */
+main section {
+  margin-bottom: calc(var(--spacing-unit) * 3.5);
+  padding-top: calc(var(--spacing-unit) * 3);
+  border-top: 1px solid var(--color-border);
+}
+
+main section:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+section h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+  break-after: avoid;
+}
+
+/* ==========================================================
+   EXPERIENCE / EDUCATION ENTRIES
+   ========================================================== */
+.entry {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.entry + .entry {
+  margin-top: calc(var(--spacing-unit) * 2.5);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 2);
+}
+
+.entry-header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.entry-org {
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.entry-date {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.entry ul {
+  list-style: disc;
+  margin-top: calc(var(--spacing-unit) * 0.75);
+  padding-left: calc(var(--spacing-unit) * 2.25);
+}
+
+.entry li {
+  margin-bottom: calc(var(--spacing-unit) * 0.4);
+}
+
+/* ==========================================================
+   SKILLS
+   ========================================================== */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 2);
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+  margin-top: calc(var(--spacing-unit) * 3);
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================
+   RESPONSIVE — on-screen preview only; print always uses @page above
+   ========================================================== */
+@media screen and (max-width: 600px) {
+  body {
+    padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 2);
+  }
+}
+
+/* ==========================================================
+   PRINT — no element is allowed to cross a page boundary
+   uncontrolled: every section and entry is break-inside: avoid,
+   and headings never end up orphaned at the bottom of a page.
+   ========================================================== */
+@media print {
+  body {
+    padding: 0;
+    max-width: 100%;
+    font-size: 12.5pt;
+  }
+
+  main section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
